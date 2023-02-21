@@ -1,4 +1,4 @@
-// console.clear();
+console.clear();
 
 function deleteElement(index) {
   const element = document.getElementById(`e-${index}`);
@@ -116,9 +116,19 @@ async function search() {
     if (response.ok) {
       response.json().then((result) => pushSearchElements(result.items));
     } else {
-      console.log("Error");
+      //Можно пробрасывать ошибку
+      // response.json().then((error) => {
+      //   const err = new Error("Что-то пошло не так");
+
+      //   err.data = error;
+      //   throw err;
+      // });
+
       //Можно повторить попытку через 5 секунд
       // setTimeout(search, 5000);
+
+      //Можно просто написать в консоль
+      console.log("Что-то пошло не так");
     }
   }
 }
