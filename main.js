@@ -104,17 +104,17 @@ function pushSearchElements(items) {
 }
 
 async function search() {
-  let result;
+  let response;
 
   //   console.log(this.value);
   if (this.value === "") {
     deleteSearchElements();
   } else {
-    result = await fetch(
+    response = await fetch(
       `https://api.github.com/search/repositories?q=${this.value}`
     );
-    if (result.ok) {
-      result.json().then((result) => pushSearchElements(result.items));
+    if (response.ok) {
+      response.json().then((result) => pushSearchElements(result.items));
     } else {
       console.log("Error");
       //Можно повторить попытку через 5 секунд
