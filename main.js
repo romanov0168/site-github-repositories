@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 
 function deleteElement(index) {
   const element = document.getElementById(`e-${index}`);
