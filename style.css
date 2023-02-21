@@ -1,0 +1,39 @@
+.wrapper {
+    width: 600px;
+    background-color: #C4C4C4;
+}
+
+.search {
+    height: 150px;
+}
+
+.search__element {
+    width: 300px;
+    list-style-type: none;
+    background-color: #E3E3E3;
+}
+
+.search__element:hover {
+    cursor: pointer;
+    background-color: #65CDF9;
+}
+
+.element {
+    display: flex;
+    background-color: #E27BEB;
+}
+
+.element__information {
+    width: 500px;
+}
+
+.element__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.element__delete {
+    cursor: pointer;
+}
